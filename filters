@@ -1,0 +1,17 @@
+<h1>Filter and Filter view</h1>
+
+Filtering a list of items:
+="=OR("&"C2="""&JOIN(""", C2=""", A2:A4)&")"
+Paste the output @ Filter by condition/Custom formula is
+
+Formula decontruction:
+The filter accepts multiple entries filtering following this model:
+=OR(C2="item1", C2="item2", C2="item3")
+
+where:  
+C2 is the first cell with data on the dataset which will be filtered
+A2:A4 is the range we want to gather data to create the filter 
+> The data range can be filtered fo an specific need, like in the example below:
+> ="=OR("&"A3="""&JOIN(""", A3=""", FILTER(A3:A,E3:E<>""))&""")"
+
+
